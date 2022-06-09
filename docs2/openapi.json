@@ -10,6 +10,11 @@
       "description": "Generated server url"
     }
   ],
+  "security": [
+    {
+      "Tako-Token": []
+    }
+  ],
   "paths": {
     "/register": {
       "post": {
@@ -162,6 +167,15 @@
       },
       "MonoExAPIResponse": {
         "type": "object"
+      }
+    },
+    "securitySchemes": {
+      "Tako-Token": {
+        "type": "apiKey",
+        "description": "Token",
+        "name": "Tako-Token",
+        "in": "header",
+        "scheme": "apiKey"
       }
     }
   }
